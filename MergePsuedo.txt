@@ -1,0 +1,38 @@
+mergesort(array a)
+
+    int n = a.length
+
+        if (n == 1)
+            return a;
+
+    arrayOne = a[0]..a[n/2]
+    arrayTwo = a[(n/2)+1]... a[n]
+
+    arrayOne = mergeSort(arrayOne)
+    arrayTwo = mergeSort(ArrayTwo)
+
+    return merge(arrayOne, arrayTwo)
+
+merge(array a, array b)
+    // init array c to return
+    array c
+
+    while (a and b have elements)
+        if(a[X] > b[X])
+            add b[O] to end of array c
+            remove b[O] from b
+        else
+            add a[O] to end of array c
+            remove a[O] from a
+    
+    // either a or b is empty
+
+    while (a has elements)
+        add a[O] to end of c
+        remove a[O] from a
+
+    while (b has elements)
+        add b[O] to end of c
+        remove b[O] from b
+    
+    return c
